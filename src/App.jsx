@@ -1,6 +1,6 @@
 import "./App.css";
 import VendingMachine from "./VendingMachine";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Chips from "./Chips";
 import Soda from "./Soda";
 import Chocolate from "./Chocolate";
@@ -8,10 +8,10 @@ import Chocolate from "./Chocolate";
 function App() {
     return (
         <>
-            <BrowserRouter>
+            <Router>
                 <Routes>
                     <Route
-                        path="/"
+                        index
                         element={
                             <VendingMachine
                                 snacks={["chips", "soda", "chocolate"]}
@@ -22,7 +22,7 @@ function App() {
                     <Route path="/soda" element={<Soda />} />
                     <Route path="/chocolate" element={<Chocolate />} />
                 </Routes>
-            </BrowserRouter>
+            </Router>
         </>
     );
 }
