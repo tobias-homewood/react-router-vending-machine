@@ -6,7 +6,9 @@ const Chips = () => {
     return (
         <div>
             <h1>Chips</h1>{" "}
-            <button onClick={() => navigate("/")}>Go back</button>
+            <button className="btn btn-primary" onClick={() => navigate("/")}>
+                Go back
+            </button>
         </div>
     );
 };
