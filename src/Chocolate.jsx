@@ -1,10 +1,11 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Chocolate = () => {
+    const navigate = useNavigate();
     return (
         <div>
             <h1>Chocolate</h1>
-            <button>Go back</button>
+            <button onClick={() => navigate("/")}>Go back</button>
         </div>
     );
 };
